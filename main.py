@@ -34,20 +34,6 @@ def draw_keypoints(frame, keypoints, confidence_threshold):
         cv2.line(frame, (int(x1), int(y1)), (int(x3), int(y3)), (0,0,255), 2)
         cv2.line(frame, (int(x3), int(y3)), (int(x2), int(y2)), (0,0,255), 2)
 
-
-    # for kp in shaped:
-    #     ky, kx, kp_conf = kp
-    #     if kp_conf > confidence_threshold:
-    #         cv2.circle(frame, (int(kx), int(ky)), 4, (0,255,0), -1)
-    #         xOffset = int(kx)-450
-    #         yOffset = int(ky)-450
-    #         if (numpy.abs(int(kx)-450) < 300 and numpy.abs(int(ky)-450) < 300) :
-    #             pyautogui.moveTo(xOffset+1280, yOffset+719)
-                # pyautogui.click()
-                # pyautogui.moveTo(1280, 719)
-                # print(int(kx)-450, int(ky)-450)
-
-
 monitor = {"top": 270, "left": 830, "width": 900, "height": 900}
 
 with mss.mss() as sct:
